@@ -1,0 +1,60 @@
+
+
+<div >
+  <p class="font-weight-bold" >{{homeWorkNo}}</p>
+</div>
+
+
+<div class="container-fluid">
+ <p class="text-secondary">My Books</p>
+  <table style="background-color: #acacac; font-size: small" class="font-weight-light">
+
+    <thead >
+    <tr class="p-3 mb-2 bg-dark text-white" style="height:40px; width:400px;">
+      <th>Title</th>
+      <th>Qty</th>
+      <th>UnitPrice</th>
+      <th>$UnitPrice</th>
+      <th>Line Total</th>
+      <th>Total</th>
+      <th >{{ getTotal() | currency }} </th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let list of lists; let idx=index">
+    <tr >
+      <td>
+        <input [(ngModel)]="list.title" size="16px">
+      </td>
+      <td>
+        <input [(ngModel)]="list.qty" size="2">
+      </td>
+      <td>
+        <input [(ngModel)]="list.price" size="6">
+      </td>
+      <td style="width: 70px">{{list.price | currency}}</td>
+      <td style="width: 70px">{{list.price * list.qty | currency}}</td>
+      <td colspan="2">
+        <button (click)="removeBook(idx)" style="background-color: #bf4f3c;" class="text-light">
+          Remove
+        </button>
+      </td>
+
+
+    </tr>
+    </tbody>
+    <tfoot class="p-3 mb-2 bg-dark text-white" style="height:35px; width:400px;">
+    <tr>
+      <td colspan="3">
+        <button (click)="addBook()" class=" text-light bg-primary">New</button>
+      </td>
+
+      <td colspan="4">
+        <button (click)="save()" class="text-light bg-primary">Save</button>
+      </td>
+
+    </tr>
+    </tfoot>
+
+  </table>
+
+</div>

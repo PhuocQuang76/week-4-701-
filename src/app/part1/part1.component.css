@@ -1,0 +1,31 @@
+table {
+  border: 2px solid #777;
+}
+td {
+  border-right: 2px solid #777;
+  padding: 10px;
+}
+
+td input{
+  border: 0px solid white;
+  box-shadow: 2px 2px #919191;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+button {
+  border: 0px solid white;
+  border-radius: 3px;
+  font-family: Verdana;
+}
+
+button:hover{
+  color: #50414d !important;
+  background-color: #ffc468 !important;
+}
+
+tfoot>tr>td{
+  border: 0px solid white;
+}
+
+

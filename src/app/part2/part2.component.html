@@ -1,0 +1,23 @@
+
+<div >
+  <p class="font-weight-bold" >{{homeWorkNo}}</p>
+</div>
+
+
+<div class="row">
+  <label class="col-md-1">Input: </label>
+  <input class="col-sm-4" type="text" [(ngModel)]="inputString" ><br>
+
+</div>
+<div class="row">
+
+  <label class="col-md-1">Delimiter: </label>
+  <input class="col-sm-4" id="delimiter" type="text" [(ngModel)]="delimiterString">
+
+</div>
+<div>
+  <br>
+  <p>{{inputString | tokenizer:','}} <span> (Default) </span></p>
+  <p>{{inputString | tokenizer:delimiterString}} <span> (With Option) </span></p>
+
+</div>

@@ -1,0 +1,9 @@
+
+input{
+  border-radius: 6px;
+}
+
+input:hover {
+  background-color: #fad06b;
+  color: #bf4f3c;
+}
